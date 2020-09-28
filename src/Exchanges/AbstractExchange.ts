@@ -1001,7 +1001,6 @@ import "./Bybit";
 import "./CexIo";
 import "./Cobinhood";
 import "./CoinbasePro";
-import "./Deribit";
 import "./FCoin";
 import "./Gemini";
 import "./HistoryDataExchange";
