@@ -1,9 +1,11 @@
 {
     "data": [
         {
-            "exchanges": "Bitfinex",
+            "exchanges": [
+                "Bitfinex"
+            ],
             "marginTrading": true,
-            "tradeTotalBtc": 200,
+            "tradeTotalBtc": 1000,
             "notifyTrades": true,
             "warmUpMin": 0,
             "strategies": {

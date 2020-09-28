@@ -1,0 +1,37 @@
+{
+    "data": [
+        {
+            "exchanges": [
+                "Bitfinex"
+            ],
+            "marginTrading": true,
+            "tradeTotalBtc": 150,
+            "warmUpMin": 0,
+            "notifyTrades": false,
+            "updateIndicatorsOnTrade": false,
+            "flipPosition": true,
+            "closePositionFirst": false,
+            "closePositionAndTrade": false,
+            "strategies": {
+                "TradingViewSignal": {
+                    "email": "tradingview@wolfbot.org",
+                    "password": "",
+                    "host": "",
+                    "port": 0,
+                    "tls": true,
+                    "checkMailSec": 120,
+                    "tradeDirection": "both",
+                    "buyWords": "buy",
+                    "sellWords": "sell",
+                    "closeWords": "close",
+                    "alwaysAllowPosIncrease": false,
+                    "forceMaker": false,
+                    "pair": "USD_BTC",
+                    "candleSize": 1,
+                    "tradeStrategy": "",
+                    "enableLog": true
+                }
+            }
+        }
+    ]
+}
