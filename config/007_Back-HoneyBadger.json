@@ -1,0 +1,27 @@
+{
+  "data": [
+    {
+      "exchanges": [
+        "Bitfinex"
+    ],
+      "marginTrading": true,
+      "tradeTotalBtc": 10000,
+      "warmUpMin": 0,
+      "strategies": {
+        "HoneyBadger": {
+          "pair": "USD_BTC",
+          "candleSize": 60,
+          "enableLog": true
+        },
+        "StopLossTurn": {
+          "order": "closeLong",
+          "setback": 9.99,
+          "time": 14400,
+          "candleSize": 5,
+          "pair": "USD_BTC",
+          "enableLog": false
+        }
+      }
+    }
+  ]
+}

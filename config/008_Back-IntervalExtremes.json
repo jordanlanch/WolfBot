@@ -1,0 +1,41 @@
+{
+  "data": [
+    {
+      "exchanges": ["Bitfinex"],
+      "marginTrading": true,
+      "tradeTotalBtc": 10000,
+      "warmUpMin": 0,
+      "strategies": {
+        "IntervalExtremes": {
+          "tradeDirection": "both",
+          "mode": "bounce",
+          "tradeInterval": "daily",
+          "candleSize": 60,
+          "pair": "USD_BTC",
+          "tradeStrategy": "RSIScalpOrderer",
+          "enableLog": true
+        },
+        "RSIScalpOrderer": {
+          "low": 34,
+          "high": 70,
+          "expiry": 20,
+          "candleSize": 5,
+          "pair": "USD_BTC",
+          "enableLog": true
+        },
+        "StopLossTurn": {
+          "order": "closeLong",
+          "setback": 3.5,
+          "setbackLong": 5.5,
+          "time": 7200,
+          "reduceTimeByVolatility": false,
+          "low": 52,
+          "high": 56,
+          "candleSize": 5,
+          "pair": "USD_BTC",
+          "enableLog": false
+        }
+      }
+    }
+  ]
+}
