@@ -20,15 +20,16 @@ config.config = {
     "backupLastLog": true,
     "jsonLog": false,
     "apiKeys" : { // leeave empty to disable API keys (public access)
+        "JFSDFHl340udfnsf23SF234": true
     },
     "updateUrl": "",
 
     // put your MongoDB connection URL in here: mongodb://user:password@host:port/database
-    "mongoUrl": "",
-    "mongoTimeoutSec": 5*60,
+    "mongoUrl": "mongodb://127.0.0.1:27017/wolfbotDB",
+    "mongoTimeoutSec": 20*60,
     "searchHosts": [''], // elasticsearch host:port
-    "mongoMaxKeyStrLen": 800, // max 1024 bytes for WiredTiger
-    "httpTimeoutSec": 10, // for our own webserver
+    "mongoMaxKeyStrLen": 1024, // max 1024 bytes for WiredTiger
+    "httpTimeoutSec": 20, // for our own webserver
     "localAddress": "", // bind outgoing requests to a specific local IP
     "projectUrl": "https://wolfbot.org",
     "preferredCrawlerIPs": [],
@@ -45,7 +46,7 @@ config.config = {
 
     "logExchangeRequests": false,
     "logStrategyRequests": false,
-    "defaultExchanges": ["Poloniex"],
+    "defaultExchanges": ["Bitfinex"],
     "tradesDir": "trades",
     "backfindDir": "backfind", // subdir of tradesDir
     "maxParallelBacktests": 8, // 5 // 16 for server with 12 cores
@@ -53,7 +54,7 @@ config.config = {
     "abortBacktestEarlyBalancePercent": 60, // abort if portfolio value lost more than this in %
     "traders": ["realTime", "realTimePaper", "notifier"],
 
-    "maxEventListeners": 120,
+    "maxEventListeners": 240,
     "exchangeParams": [],
 
     // web UI config (similar to express app config)
@@ -66,13 +67,13 @@ config.config = {
 
     // JS stuff
     "multiselect": {
-        "maxSelect": 3
+        "maxSelect": 6
     },
 
     // for functions.js
-    "removeDownloadFrameSec": 10,
+    "removeDownloadFrameSec": 20,
     "timezoneDiffMin": now.getTimezoneOffset(), // PHP: date('I') == 1 ? -120 : -60
-    "maxLoadRetries": 10,
+    "maxLoadRetries": 20,
     "cookieLifeDays": 365,
     "sessionLifeDays": 30, // we don't have sessions (yet)
 
@@ -99,9 +100,9 @@ config.config = {
 
     "data": {
         "maxPredictionOffPercent": 2.0,
-        "maxShowHistoryTrades": 9000,
+        "maxShowHistoryTrades": 90000,
         "backtestStartAgoDays": 32,
         "backtestEndAgoDays": 2,
-        "minifyResourcesUiDevIntervalMs": 1000
+        "minifyResourcesUiDevIntervalMs": 2000
     }
 }
